@@ -1,0 +1,9 @@
+.tipRowTitle {
+  color: hsl(186, 14%, 43%);
+  font-family: "Space Mono", monospace;
+}
+
+.tipRowWrapper {
+  margin-bottom: 25px;
+  margin-top: 30px;
+}

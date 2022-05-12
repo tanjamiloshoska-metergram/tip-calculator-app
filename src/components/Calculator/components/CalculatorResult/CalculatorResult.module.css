@@ -1,0 +1,10 @@
+.calcResWrapper {
+  background-color: hsl(183, 100%, 15%);
+  padding: 30px;
+  width: 300px;
+  border-radius: 15px;
+}
+
+.results {
+  margin-bottom: 80px;
+}

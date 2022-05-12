@@ -1,0 +1,17 @@
+.tipButton {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-family: "Space Mono", monospace;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tipButton:hover {
+  background-color: hsl(172, 67%, 75%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
