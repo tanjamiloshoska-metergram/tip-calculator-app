@@ -1,6 +1,6 @@
 import styles from "./CustomTextField.module.css";
 
-const CustomTextField = ({ label, isSelected, icon }) => {
+const CustomTextField = ({ label, isSelected, icon, handleChange }) => {
   return (
     <label className={styles.customTxtLabel}>
       {label}
@@ -14,6 +14,7 @@ const CustomTextField = ({ label, isSelected, icon }) => {
               : styles.customTxtField
           }
           placeholder="0"
+          onChange={(e) => handleChange(e.target.value)}
         />
       </div>
     </label>

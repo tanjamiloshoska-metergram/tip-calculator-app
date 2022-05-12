@@ -4,12 +4,20 @@ import styles from "./ConfigureCalculator.module.css";
 import dollar from "../../assets/icon-dollar.svg";
 import person from "../../assets/icon-person.svg";
 
-const ConfigureCalculator = () => {
+const ConfigureCalculator = ({ onPeopleChange, onBillChange, onTipChange }) => {
   return (
     <div className={styles.configureCalcWrapper}>
-      <CustomTextField label={"Bill"} icon={dollar} />
-      <TipRow />
-      <CustomTextField label={"Number of People"} icon={person} />
+      <CustomTextField
+        label={"Bill"}
+        icon={dollar}
+        handleChange={onBillChange}
+      />
+      <TipRow handleTipChange={onTipChange} />
+      <CustomTextField
+        label={"Number of People"}
+        icon={person}
+        handleChange={onPeopleChange}
+      />
     </div>
   );
 };

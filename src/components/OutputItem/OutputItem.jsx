@@ -1,5 +1,5 @@
 import styles from "./OutputItem.module.css";
-const OutputItem = ({ title, description, amount = "0.00" }) => {
+const OutputItem = ({ title, description, amount }) => {
   return (
     <div className={styles.itemWrapper}>
       <div className={styles.itemHeader}>

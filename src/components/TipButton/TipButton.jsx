@@ -1,5 +1,5 @@
 import styles from "./TipButton.module.css";
-const TipButton = ({ children, handleClick, isSelected }) => {
+const TipButton = ({ children, handleClick, isSelected, value }) => {
   return (
     <button
       className={
@@ -7,7 +7,7 @@ const TipButton = ({ children, handleClick, isSelected }) => {
           ? [styles.tipButton, styles.selectedTipButton].join(" ")
           : styles.tipButton
       }
-      onClick={handleClick}
+      onClick={() => handleClick(value)}
     >
       {children}
     </button>
