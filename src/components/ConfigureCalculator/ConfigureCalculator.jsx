@@ -4,7 +4,12 @@ import styles from "./ConfigureCalculator.module.css";
 import dollar from "../../assets/icon-dollar.svg";
 import person from "../../assets/icon-person.svg";
 
-const ConfigureCalculator = ({ onPeopleChange, onBillChange, onTipChange }) => {
+const ConfigureCalculator = ({
+  onPeopleChange,
+  onBillChange,
+  onTipChange,
+  selectedTip,
+}) => {
   return (
     <div className={styles.configureCalcWrapper}>
       <CustomTextField
@@ -12,7 +17,7 @@ const ConfigureCalculator = ({ onPeopleChange, onBillChange, onTipChange }) => {
         icon={dollar}
         handleChange={onBillChange}
       />
-      <TipRow handleTipChange={onTipChange} />
+      <TipRow handleTipChange={onTipChange} selectedTip={selectedTip} />
       <CustomTextField
         label={"Number of People"}
         icon={person}

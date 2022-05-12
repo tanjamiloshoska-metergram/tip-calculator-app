@@ -9,6 +9,7 @@ const ResetButton = ({ handleClick, isSelected }) => {
           : styles.resetButton
       }
       onClick={handleClick}
+      disabled={isSelected}
     >
       RESET
     </button>

@@ -25,6 +25,7 @@ const Calculator = () => {
         onBillChange={onBillChange}
         onPeopleChange={onPeopleChange}
         onTipChange={onTipChange}
+        selectedTip={tipPercent}
       />
       <CalculatorResult
         bill={bill}
