@@ -1,8 +1,8 @@
-import CustomTextField from "../../../CustomTextField/CustomTextField";
-import dollar from "../../../../assets/icon-dollar.svg";
-import person from "../../../../assets/icon-person.svg";
+import CustomTextField from "../CustomTextField/CustomTextField";
+import TipRow from "../TipRow/TipRow";
 import styles from "./ConfigureCalculator.module.css";
-import TipRow from "./components/TipRow/TipRow";
+import dollar from "../../assets/icon-dollar.svg";
+import person from "../../assets/icon-person.svg";
 
 const ConfigureCalculator = () => {
   return (

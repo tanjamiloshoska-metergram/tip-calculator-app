@@ -1,5 +1,5 @@
-import TipButton from "../../../../../TipButton/TipButton";
-import TipTextField from "../../../../../TipTextField/TipTextField";
+import TipButton from "../TipButton/TipButton";
+import TipTextField from "../TipTextField/TipTextField";
 import styles from "./TipRow.module.css";
 const TipRow = ({ handleChange, handleClick }) => {
   return (

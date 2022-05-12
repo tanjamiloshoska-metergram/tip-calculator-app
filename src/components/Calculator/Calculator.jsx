@@ -1,6 +1,6 @@
 import styles from "./Calculator.module.css";
-import CalculatorResult from "./components/CalculatorResult/CalculatorResult";
-import ConfigureCalculator from "./components/ConfigureCalculator/ConfigureCalculator";
+import CalculatorResult from "../CalculatorResult/CalculatorResult";
+import ConfigureCalculator from "../ConfigureCalculator/ConfigureCalculator";
 const Calculator = () => {
   return (
     <div className={styles.calculatorWrapper}>

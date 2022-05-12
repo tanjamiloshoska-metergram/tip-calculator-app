@@ -1,6 +1,6 @@
-import ResetButton from "../../../ResetButton/ResetButton";
+import ResetButton from "../ResetButton/ResetButton";
 import styles from "./CalculatorResult.module.css";
-import OutputItem from "./components/OutputItem/OutputItem";
+import OutputItem from "../OutputItem/OutputItem";
 const CalculatorResult = () => {
   return (
     <div className={styles.calcResWrapper}>

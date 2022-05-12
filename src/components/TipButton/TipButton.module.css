@@ -15,3 +15,6 @@
   color: hsl(183, 100%, 15%);
   cursor: pointer;
 }
+.selectedTipButton {
+  background-color: hsl(172, 67%, 45%);
+}

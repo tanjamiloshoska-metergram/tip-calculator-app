@@ -1,8 +1,15 @@
 import styles from "./ResetButton.module.css";
 
-const ResetButton = ({ handleClick, style }) => {
+const ResetButton = ({ handleClick, isSelected }) => {
   return (
-    <button style={style} className={styles.resetButton} onClick={handleClick}>
+    <button
+      className={
+        isSelected
+          ? [styles.resetButton, styles.selectedResetButton].join(" ")
+          : styles.resetButton
+      }
+      onClick={handleClick}
+    >
       RESET
     </button>
   );

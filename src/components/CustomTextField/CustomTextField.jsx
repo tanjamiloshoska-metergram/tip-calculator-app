@@ -1,6 +1,6 @@
 import styles from "./CustomTextField.module.css";
 
-const CustomTextField = ({ style, label, isSelected, icon }) => {
+const CustomTextField = ({ label, isSelected, icon }) => {
   return (
     <label className={styles.customTxtLabel}>
       {label}
@@ -8,7 +8,6 @@ const CustomTextField = ({ style, label, isSelected, icon }) => {
         <img src={icon} alt="icon" className={styles.icon} />
         <input
           type="text"
-          style={style}
           className={
             isSelected
               ? [styles.customTxtField, styles.selectedTxtField].join(" ")
