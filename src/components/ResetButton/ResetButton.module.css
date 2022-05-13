@@ -17,3 +17,7 @@
 .selectedResetButton {
   background-color: hsl(172, 67%, 45%, 20%);
 }
+
+.resetButton:focus {
+  background-color: hsl(172, 67%, 45%, 20%);
+}

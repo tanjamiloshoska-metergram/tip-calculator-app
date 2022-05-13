@@ -3,3 +3,64 @@
   padding-right: 30px;
   width: 330px;
 }
+.customTxtField::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.customTxtField {
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+  padding: 5px;
+  padding-left: 25px;
+  background-size: 20px;
+  background-color: hsl(189, 41%, 95%);
+  border: none;
+  width: 300px;
+  height: 30px;
+}
+
+.customTxtField,
+.customTxtLabel {
+  font-family: "Space Mono", monospace;
+}
+
+.selectedTxtField {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+
+.customTxtField:hover {
+  border: 2px solid hsl(172, 67%, 45%);
+  cursor: pointer;
+}
+
+.customTxtLabel {
+  color: hsl(186, 14%, 43%);
+}
+.inputWrapper {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+}
+
+.errorParagraph {
+  color: red;
+  font-size: 12px;
+  font-family: "Space Mono", monospace;
+  padding: 0px;
+  margin: 0px;
+}
+
+.labelWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.onErrorTxtField {
+  border: 2px solid red;
+}

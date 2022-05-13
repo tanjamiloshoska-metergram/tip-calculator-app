@@ -7,3 +7,24 @@
   margin-bottom: 25px;
   margin-top: 30px;
 }
+.tipInput {
+  color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  border: none;
+  width: 95px;
+  height: 40px;
+  font-family: "Space Mono", monospace;
+  background-color: hsl(189, 41%, 95%);
+  text-align: center;
+}
+.tipInput::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+.tipInput:hover {
+  border: 2px solid hsl(172, 67%, 45%);
+  cursor: pointer;
+}
+.tipInput:focus {
+  border: 2px solid hsl(172, 67%, 45%) !important;
+  cursor: pointer;
+}
