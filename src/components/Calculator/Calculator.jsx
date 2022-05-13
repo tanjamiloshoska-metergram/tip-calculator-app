@@ -19,6 +19,12 @@ const Calculator = () => {
     setBill(newBill);
   };
 
+  const onReset = () => {
+    setBill(0.0);
+    setNumberOfPeople(1);
+    setTipPercent(0.0);
+  };
+
   return (
     <div className={styles.calculatorWrapper}>
       <ConfigureCalculator
@@ -26,11 +32,14 @@ const Calculator = () => {
         onPeopleChange={onPeopleChange}
         onTipChange={onTipChange}
         selectedTip={tipPercent}
+        numberOfPeople={numberOfPeople}
+        bill={bill}
       />
       <CalculatorResult
         bill={bill}
         numberOfPeople={numberOfPeople}
         tipPercent={tipPercent}
+        onReset={onReset}
       />
     </div>
   );

@@ -9,6 +9,8 @@ const ConfigureCalculator = ({
   onBillChange,
   onTipChange,
   selectedTip,
+  numberOfPeople,
+  bill,
 }) => {
   return (
     <div className={styles.configureCalcWrapper}>
@@ -16,12 +18,14 @@ const ConfigureCalculator = ({
         label={"Bill"}
         icon={dollar}
         handleChange={onBillChange}
+        value={bill}
       />
       <TipRow handleTipChange={onTipChange} selectedTip={selectedTip} />
       <CustomTextField
         label={"Number of People"}
         icon={person}
         handleChange={onPeopleChange}
+        value={numberOfPeople}
       />
     </div>
   );

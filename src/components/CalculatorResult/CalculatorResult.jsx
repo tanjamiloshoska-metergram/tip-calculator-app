@@ -1,7 +1,7 @@
 import ResetButton from "../ResetButton/ResetButton";
 import styles from "./CalculatorResult.module.css";
 import OutputItem from "../OutputItem/OutputItem";
-const CalculatorResult = ({ tipPercent, numberOfPeople, bill }) => {
+const CalculatorResult = ({ tipPercent, numberOfPeople, bill, onReset }) => {
   const totalTip = () => {
     return (parseFloat(bill) * (parseFloat(tipPercent) / 100)).toFixed(2);
   };
@@ -30,7 +30,7 @@ const CalculatorResult = ({ tipPercent, numberOfPeople, bill }) => {
           amount={totalPerPerson()}
         />
       </div>
-      <ResetButton />
+      <ResetButton handleClick={onReset} />
     </div>
   );
 };
