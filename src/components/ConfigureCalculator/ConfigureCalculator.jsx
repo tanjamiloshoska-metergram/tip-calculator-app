@@ -53,6 +53,7 @@ const ConfigureCalculator = ({
           selectedTip={selectedTip}
           onCustomTipChange={onCustomTipChange}
           customTip={customTip}
+          onError={onError}
         />
         <div className={styles.labelWrapper}>
           <label className={styles.customTxtLabel}>Number of people</label>

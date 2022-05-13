@@ -1,11 +1,17 @@
 import TipButton from "../TipButton/TipButton";
 import styles from "./TipRow.module.css";
+import { useState } from "react";
 const TipRow = ({
   handleTipChange,
   selectedTip,
   onCustomTipChange,
   customTip,
+  onError,
 }) => {
+  const [isTxtFieldSet, setTextField] = useState("text");
+  const onTxtFieldTypeChange = (type) => {
+    setTextField(type);
+  };
   return (
     <div className={styles.tipRowWrapper}>
       <p className={styles.tipRowTitle}>Select Tip %</p>
@@ -36,11 +42,16 @@ const TipRow = ({
           isSelected={50 === selectedTip}
         />
         <input
-          type="text"
+          type={isTxtFieldSet === "text" ? "text" : "submit"}
           className={styles.tipInput}
           placeholder="CUSTOM"
           onChange={(e) => onCustomTipChange(e.target.value)}
           value={customTip}
+          onKeyUp={(e) => {
+            if (e.keyCode === 13) onTxtFieldTypeChange("submit");
+          }}
+          onDoubleClick={() => onTxtFieldTypeChange("text")}
+          onClick={() => handleTipChange(customTip)}
         />
       </div>
     </div>
