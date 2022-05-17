@@ -1,6 +1,30 @@
 import TipButton from "../TipButton/TipButton";
 import styles from "./TipRow.module.css";
 import { useState } from "react";
+import CustomTipInput from "../CustomTipInput/CustomTipInput";
+
+const tipButtons = [
+  {
+    id: 1,
+    tipValue: 5,
+  },
+  {
+    id: 1,
+    tipValue: 10,
+  },
+  {
+    id: 1,
+    tipValue: 15,
+  },
+  {
+    id: 1,
+    tipValue: 25,
+  },
+  {
+    id: 1,
+    tipValue: 50,
+  },
+];
 const TipRow = ({
   handleTipChange,
   selectedTip,
@@ -12,46 +36,27 @@ const TipRow = ({
   const onTxtFieldTypeChange = (type) => {
     setTextField(type);
   };
+
+  const mapTipButtons = () => {
+    return tipButtons.map((tip) => (
+      <TipButton
+        handleClick={handleTipChange}
+        value={tip.tipValue}
+        isSelected={tip.tipValue === selectedTip}
+      />
+    ));
+  };
   return (
     <div className={styles.tipRowWrapper}>
       <p className={styles.tipRowTitle}>Select Tip %</p>
       <div>
-        <TipButton
-          handleClick={handleTipChange}
-          value={5}
-          isSelected={5 === selectedTip}
-        />
-        <TipButton
-          handleClick={handleTipChange}
-          value={10}
-          isSelected={10 === selectedTip}
-        />
-        <TipButton
-          handleClick={handleTipChange}
-          value={15}
-          isSelected={15 === selectedTip}
-        />
-        <TipButton
-          handleClick={handleTipChange}
-          value={20}
-          isSelected={20 === selectedTip}
-        />
-        <TipButton
-          handleClick={handleTipChange}
-          value={50}
-          isSelected={50 === selectedTip}
-        />
-        <input
-          type={isTxtFieldSet === "text" ? "text" : "submit"}
-          className={styles.tipInput}
-          placeholder="CUSTOM"
-          onChange={(e) => onCustomTipChange(e.target.value)}
-          value={customTip}
-          onKeyUp={(e) => {
-            if (e.keyCode === 13) onTxtFieldTypeChange("submit");
-          }}
-          onDoubleClick={() => onTxtFieldTypeChange("text")}
-          onClick={() => handleTipChange(customTip)}
+        {mapTipButtons()}
+        <CustomTipInput
+          handleTipChange={handleTipChange}
+          isTxtFieldSet={isTxtFieldSet}
+          onCustomTipChange={onCustomTipChange}
+          onTxtFieldTypeChange={onTxtFieldTypeChange}
+          customTip={customTip}
         />
       </div>
     </div>

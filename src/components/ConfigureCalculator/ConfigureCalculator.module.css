@@ -28,6 +28,10 @@
   border: 2px solid hsl(172, 67%, 45%);
 }
 
+.customTxtField:focus {
+  border: 2px solid hsl(172, 67%, 45%) !important;
+}
+
 .customTxtField:hover {
   border: 2px solid hsl(172, 67%, 45%);
   cursor: pointer;
@@ -63,4 +67,8 @@
 
 .onErrorTxtField {
   border: 2px solid red;
+}
+
+.onErrorTxtField:focus {
+  border: 2px solid red !important;
 }
